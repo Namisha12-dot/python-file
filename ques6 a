@@ -1,0 +1,17 @@
+def reverse_list(input_list):
+    # Initialize an empty list to store the reversed elements
+    reversed_list = []
+    # Loop through the original list in reverse order
+    for i in range(len(input_list) - 1, -1, -1):
+        reversed_list.append(input_list[i])
+    return reversed_list
+
+# Get user input and convert it to a list
+user_input = input("Enter a list of elements separated by spaces: ")
+input_list = user_input.split()  # Split the input string into a list
+
+# Reverse the list using the function
+output_list = reverse_list(input_list)
+
+# Display the reversed list
+print("Reversed list:", output_list)

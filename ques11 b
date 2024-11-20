@@ -1,0 +1,22 @@
+def count_frequencies(input_list):
+    frequency_dict = {}
+    
+    # Iterate through the list
+    for item in input_list:
+        # Increment the count for the item in the dictionary
+        if item in frequency_dict:
+            frequency_dict[item] += 1
+        else:
+            frequency_dict[item] = 1
+
+    return frequency_dict
+
+# Input list
+input_list = [1, 1, 1, 5, 5, 3, 1, 3, 3, 1, 4, 4, 4, 2, 2, 2, 2]
+
+# Count frequencies
+frequencies = count_frequencies(input_list)
+
+# Display the output
+for key, value in sorted(frequencies.items()):
+    print(f"{key} : {value}")

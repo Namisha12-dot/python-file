@@ -1,0 +1,16 @@
+def check_element_in_tuples(tuples, element):
+    # Iterate through each tuple in the tuple of tuples
+    for t in tuples:
+        if element in t:
+            return True
+    return False
+
+# Define the original tuple of tuples
+original_tuples = (('Red', 'White', 'Blue'), ('Green', 'Pink', 'Purple'), ('Orange', 'Yellow', 'Lime'))
+
+# Check for specified elements
+elements_to_check = ['White', 'Olive']
+
+for element in elements_to_check:
+    is_present = check_element_in_tuples(original_tuples, element)
+    print(f"Check if {element} present in said tuple of tuples! {is_present}")

@@ -1,0 +1,10 @@
+# Write a Python program to print cube sum of first n natural numbers.
+def cube_sum(n):
+# Using the formula to calculate the sum of cubes
+    return (n * (n + 1) // 2) ** 2
+
+# Get user input
+n = int(input("Enter a natural number n: "))
+result = cube_sum(n)
+
+print(f"The sum of the cubes of the first {n} natural numbers is: {result}")

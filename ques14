@@ -1,0 +1,54 @@
+class ListManager:
+    def __init__(self):
+        self.elements = []  # Initialize an empty list
+
+    def append_element(self, element):
+        """Append an element to the list."""
+        self.elements.append(element)
+        print(f"Added: {element}")
+
+    def delete_element(self, element):
+        """Delete an element from the list if it exists."""
+        try:
+            self.elements.remove(element)
+            print(f"Deleted: {element}")
+        except ValueError:
+            print(f"Error: {element} not found in the list.")
+
+    def display_elements(self):
+        """Display all elements in the list."""
+        if self.elements:
+            print("Current list:", self.elements)
+        else:
+            print("The list is empty.")
+
+# Example usage
+def main():
+    list_manager = ListManager()
+
+    while True:
+        print("\nOptions:")
+        print("1. Append Element")
+        print("2. Delete Element")
+        print("3. Display Elements")
+        print("4. Exit")
+
+        choice = input("Enter your choice: ")
+
+        if choice == '1':
+            element = input("Enter the element to append: ")
+            list_manager.append_element(element)
+        elif choice == '2':
+            element = input("Enter the element to delete: ")
+            list_manager.delete_element(element)
+        elif choice == '3':
+            list_manager.display_elements()
+        elif choice == '4':
+            print("Exiting the program.")
+            break
+        else:
+            print("Invalid choice. Please try again.")
+
+if __name__ == "__main__":
+    main()
+

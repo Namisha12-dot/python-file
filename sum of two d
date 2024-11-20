@@ -1,0 +1,17 @@
+# def sum(x,y):
+#     z=x+y
+#     return z;
+# a=int(input("enter a:"))
+# b=int(input("enter b:"))
+# print("sum=",sum(a,b))
+
+
+# import random 
+# n = random.randrange(20,50,4)
+# print(n)
+
+
+import random
+mylist = [1,2,3,4,5]
+random.shuffle(mylist)
+print(mylist)

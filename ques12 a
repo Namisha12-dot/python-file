@@ -1,0 +1,29 @@
+def capitalize_first_letter(input_file, output_file):
+    try:
+        # Open the input file for reading
+        with open(input_file, 'r') as file:
+            content = file.readlines()
+
+        # Capitalize the first letter of each word in each line
+        capitalized_content = []
+        for line in content:
+            capitalized_line = ' '.join(word.capitalize() for word in line.split())
+            capitalized_content.append(capitalized_line)
+
+        # Write the capitalized content to the output file
+        with open(output_file, 'w') as file:
+            file.write('\n'.join(capitalized_content))
+
+        print(f"Capitalized content written to {output_file}")
+
+    except FileNotFoundError:
+        print(f"The file {input_file} was not found.")
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
+# Specify the input and output file names
+input_file = 'input.txt'  # Change this to your input file name
+output_file = 'output.txt'  # Change this to your desired output file name
+
+# Call the function
+capitalize_first_letter(input_file, output_file)

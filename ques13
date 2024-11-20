@@ -1,0 +1,22 @@
+def divide_numbers():
+    try:
+        # Get user input
+        numerator = float(input("Enter the numerator: "))
+        denominator = float(input("Enter the denominator: "))
+        
+        # Perform the division
+        result = numerator / denominator
+        
+        # Print the result
+        print(f"The result of {numerator} divided by {denominator} is {result}")
+
+    except ValueError:
+        print("Error: Please enter valid numbers.")
+    except ZeroDivisionError:
+        print("Error: Cannot divide by zero.")
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
+
+# Call the function
+divide_numbers()
+

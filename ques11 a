@@ -1,0 +1,32 @@
+def remove_duplicates_across_dict_values(test_dict):
+    # Create a set to track seen values
+    seen_values = set()
+    
+    # Iterate through the dictionary
+    for key, values in test_dict.items():
+        # Remove duplicates by creating a new list for each key
+        unique_values = []
+        for value in values:
+            if value not in seen_values:
+                unique_values.append(value)
+                seen_values.add(value)
+        # Update the dictionary with the unique values
+        test_dict[key] = unique_values
+
+    # Remove any remaining duplicates
+    for key in test_dict:
+        test_dict[key] = [value for value in test_dict[key] if value not in seen_values or seen_values.remove(value)]
+
+    return test_dict
+
+# Test cases
+test_dict1 = {'Manjeet': [1], 'Akash': [1, 8, 9]}
+test_dict2 = {'Manjeet': [1, 1, 1], 'Akash': [1, 1, 1]}
+
+# Remove duplicates for each test case
+output1 = remove_duplicates_across_dict_values(test_dict1)
+output2 = remove_duplicates_across_dict_values(test_dict2)
+
+# Display the results
+print("Output 1:", output1)
+print("Output 2:", output2)

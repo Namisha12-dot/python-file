@@ -1,0 +1,10 @@
+def capitalize_words(sentence):
+ # Split the sentence into words and capitalize each word
+    capitalized_sentence = ' '.join(word.capitalize() for word in sentence.split())
+    return capitalized_sentence
+
+# Get user input
+input_sentence = input("Enter a sentence: ")
+# Call the function and print the result
+output_sentence = capitalize_words(input_sentence)
+print(output_sentence)

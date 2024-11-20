@@ -1,0 +1,22 @@
+def common_characters(string1, string2):
+    # Convert both strings to sets to find common characters
+    set1 = set(string1)
+    set2 = set(string2)
+
+    # Find the intersection of both sets
+    common_chars = set1.intersection(set2)
+
+    return common_chars
+
+# Get user input
+string1 = input("Enter the first string: ")
+string2 = input("Enter the second string: ")
+
+# Find common characters
+common_chars = common_characters(string1, string2)
+
+# Display the result
+if common_chars:
+    print("Common characters:", ' '.join(common_chars))
+else:
+    print("No common characters found.")

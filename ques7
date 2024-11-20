@@ -1,0 +1,25 @@
+def sum_of_rows(matrix):
+    row_sums = []
+    for index, row in enumerate(matrix):
+        row_sum = sum(row)  # Calculate the sum of the current row
+        row_sums.append(row_sum)
+        print(f"Sum of row {index + 1} = {row_sum}")
+
+# Get dimensions of the matrix from the user
+m = int(input("Enter the number of rows (m): "))
+n = int(input("Enter the number of columns (n): "))
+
+# Initialize the matrix
+matrix = []
+
+# Get matrix values from the user
+print("Enter the matrix values row by row (space-separated):")
+for i in range(m):
+    row = list(map(int, input(f"Row {i + 1}: ").split()))
+    if len(row) != n:
+        print(f"Please enter exactly {n} numbers.")
+        exit()
+    matrix.append(row)
+
+# Calculate and display the sum of each row
+sum_of_rows(matrix)

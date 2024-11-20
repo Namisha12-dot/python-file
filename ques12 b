@@ -1,0 +1,21 @@
+def print_file_in_reverse(input_file):
+    try:
+        # Open the file for reading
+        with open(input_file, 'r') as file:
+            # Read all lines from the file
+            lines = file.readlines()
+        
+        # Print lines in reverse order
+        for line in reversed(lines):
+            print(line, end='')  # end='' prevents adding extra newlines
+
+    except FileNotFoundError:
+        print(f"The file {input_file} was not found.")
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
+# Specify the input file name
+input_file = 'input.txt'  # Change this to your input file name
+
+# Call the function
+print_file_in_reverse(input_file)

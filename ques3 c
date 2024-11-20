@@ -1,0 +1,13 @@
+#Write a Python program to print all odd numbers in a range.
+def print_odd_numbers(start, end):
+    print(f"Odd numbers between {start} and {end}:")
+    for number in range(start, end + 1):
+        if number % 2 != 0:
+            print(number, end=' ')
+    print()  # For a newline after the list of numbers
+
+# Get user input for the range
+start = int(input("Enter the starting number of the range: "))
+end = int(input("Enter the ending number of the range: "))
+
+print_odd_numbers(start, end)
